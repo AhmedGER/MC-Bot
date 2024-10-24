@@ -1,14 +1,14 @@
-// Updated dependencies versions
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const mineflayer = require('mineflayer');
-const pathfinder = require('mineflayer-pathfinder').pathfinder;
-const movements = require('mineflayer-pathfinder').movements;
-const goals = require('mineflayer-pathfinder').goals;
+const { pathfinder, movements, goals } = require('mineflayer-pathfinder');
 const pvp = require('mineflayer-pvp').plugin;
 const autoeat = require('mineflayer-auto-eat');
 const Vec3 = require('vec3');
 const tf = require('@tensorflow/tfjs-node');
 const { performance } = require('perf_hooks');
-const EventEmitter = require('events');
+import { EventEmitter } from 'events';
 
 // Enhanced bot options with better security and performance
 const botOptions = {
